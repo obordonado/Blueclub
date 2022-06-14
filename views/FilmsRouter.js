@@ -7,8 +7,8 @@ const FilmsController = require('../controllers/FilmsController');
 
 //Endpoint-function links
 router.get('/', FilmsController.getFilms);
-router.post('/addfilm', FilmsController.postFilms);
-router.get('/search/:film', FilmsController.searchFilms);
+router.post('/addfilm', FilmsController.postFilm);
+// router.get('/search/:film', FilmsController.searchFilm);
 
 
 //Export
