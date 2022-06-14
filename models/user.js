@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Rent, {
+        //En este caso, foreignKey hace referencia a como se llama la clave de user en la tabla Sale
+        foreignKey: 'userId'
+      });
     }
   }
   User.init({
