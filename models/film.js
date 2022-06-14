@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     year: DataTypes.INTEGER,
     genre: DataTypes.STRING,
     director: DataTypes.STRING,
-    duration: DataTypes.INTEGER,
+    duration: DataTypes.STRING,
     recomended_age: DataTypes.STRING,
     price: DataTypes.INTEGER
   }, {
