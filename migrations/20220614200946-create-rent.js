@@ -8,6 +8,38 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+
+
+
+      filmId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Films',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
+
+
+      userId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Users',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
+
+
+
+
+
+
+
+
+
       rent_date: {
         type: Sequelize.INTEGER
       },
