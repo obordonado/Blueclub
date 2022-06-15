@@ -51,7 +51,7 @@ UserController.loginUser = (req, res) => {
     }).then(usuarioEncontrado => {
 
         if(!usuarioEncontrado){
-            res.send("Usuario o password incorrectos");
+            res.send("Incorrect User or Password");
         } else {
             if( bcryptjs.compareSync(clave, usuarioEncontrado.password)){
                 //Comprueba que el usuario existe y el password corresponde a ese usuario
@@ -60,7 +60,7 @@ UserController.loginUser = (req, res) => {
                     expiresIn: authConfig.expires
                 });
                                 
-                let loginOKmessage = `Bienvenido ${usuarioEncontrado.name}`
+                let loginOKmessage = `Welcome back ${usuarioEncontrado.name}`
                 res.json({
                     loginOKmessage,
                     user: usuarioEncontrado,

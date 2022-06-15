@@ -8,11 +8,11 @@ RentController.getAllRent = async (req, res) => {
     
     let id = req.params.id;
 
-    let consulta = `SELECT clientes.name AS NombresCliente, muebles.nombre AS NombresMueble, proveedores.nombre AS NombreProveedores, venta.createdAt AS FechaVenta
-    FROM clientes 
-    INNER JOIN venta ON clientes.id = venta.clienteId
-    INNER JOIN muebles ON muebles.id = venta.muebleId
-    INNER JOIN proveedores ON proveedores.id = muebles.idProveedor 
+    let consulta = `SELECT user.name AS UserName, film.name AS FilmName, rent.createdAt AS rent_date
+    
+    FROM user 
+    INNER JOIN Rent ON User.id = Rent.userId
+    INNER JOIN Film ON Film.id = Rent.FilmId
     WHERE clienteId LIKE ${id};`;
 
     //A continuación viene un ejemplo de ESTRUCTURA para ejecutar querys raw (crudo) de SQL en Sequelize, en este caso

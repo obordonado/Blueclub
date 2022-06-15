@@ -1,3 +1,4 @@
+
 const config = require('../config/config.json');
 const {Sequelize, DataTypes} = require('sequelize');
 
@@ -21,6 +22,6 @@ const sequelize = new Sequelize(
 
 module.exports = sequelize.authenticate()
 .then((db)=>{
-    console.log('MYSQL connected'); 
+    console.log('MYSQL is connected'); 
     return db;
 });

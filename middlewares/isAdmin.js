@@ -1,3 +1,9 @@
+
+//Imports
+const jwt = require('jsonwebtoken');
+const authConfig = require('../config/auth');
+
+
 //Export logic
 module.exports = (req, res, next) => {
     // pick the token
@@ -5,10 +11,10 @@ module.exports = (req, res, next) => {
     // pick the user logged
     let {user} = jwt.decode(token, authConfig.secret)
     try {
-        if (user.rol == "admin") {
+        if (user.role == "admin") {
             next();
         } else {
-            res.status(403).send({ msg: `User is not allowed.` });
+            res.status(403).send({ msg: `Not allowed.` });
         }
     } catch (error) {
         res.status(400).json({

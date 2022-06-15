@@ -1,3 +1,4 @@
+
 'use strict';
 const {
   Model
@@ -22,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     client_number: DataTypes.INTEGER,
     age: DataTypes.INTEGER,
     gender: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    role: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

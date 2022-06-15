@@ -6,7 +6,7 @@ const RentController = require('../controllers/RentController');
 
 
 //Endpoint-function links
-router.get('/', RentController.getAllRent);
+router.get('/:id', RentController.getAllRent);
 
 
 

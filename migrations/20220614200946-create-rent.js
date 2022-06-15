@@ -9,8 +9,6 @@ module.exports = {
         type: Sequelize.INTEGER
       },
 
-
-
       filmId: {
         type: Sequelize.INTEGER,
         references: {
@@ -21,7 +19,6 @@ module.exports = {
         onDelete: 'CASCADE'
       },
 
-
       userId: {
         type: Sequelize.INTEGER,
         references: {
@@ -31,13 +28,6 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
       },
-
-
-
-
-
-
-
 
 
       rent_date: {
