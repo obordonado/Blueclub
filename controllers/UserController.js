@@ -40,7 +40,7 @@ UserController.postUser = async (req, res) => {
         password: password,
         role: role
     }).then(user => {
-        res.send(`${user.name}, you have been added succesfully`);
+        res.send(`${user.name}, you have been added succesfully!`);
 
     }).catch((error) => {
         res.send(error);

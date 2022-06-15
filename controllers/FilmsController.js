@@ -35,7 +35,7 @@ FilmsController.postFilm = async (req, res) => {
         price: price
 
     }).then(film => {
-        res.send(`${film.nombre}, has been added succesfully!`);
+        res.send(`${film.title}, has been added succesfully!`);
     }).catch((error) => {
         res.send(error);
     });
@@ -45,11 +45,11 @@ FilmsController.postFilm = async (req, res) => {
 FilmsController.searchFilm = async (req, res) => {
 
     //Al tratarse de un GET y pasarle los parámetros por URL, no se usa req.body, sino req.params.
-    let film = req.params.model;
+    let films = req.params.model;
     
     Film.findAll({
    
-        where : { film : title}
+        where : { title : title}
     })
     .then(resultadoBusqueda => {
 
