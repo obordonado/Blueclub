@@ -10,7 +10,14 @@ const UserController = {};
 
 UserController.getUser = (req, res) => {
     //Funcion findAll de Sequelize
-    User.findAll()
+    User.findAll(
+        {
+            attributes:{
+                exclude:[`password`, `role`]
+            }
+        }
+    )
+
     .then(data => {
     
         res.send(data)
@@ -24,13 +31,14 @@ UserController.postUser = async (req, res) => {
     let age = req.body.age;
     let gender = req.body.gender;
     let password = bcryptjs.hashSync(req.body.password, Number.parseInt(authConfig.rounds));
-
+    let role = req.body.role;
     User.create({
         name: name,
         client_number: client_number,
         age: age,
         gender:gender,        
-        password: password
+        password: password,
+        role: role
     }).then(user => {
         res.send(`${user.name}, you have been added succesfully`);
 
@@ -47,6 +55,7 @@ UserController.loginUser = (req, res) => {
 
     User.findOne({
         where : {client_number : documentacion}
+        
 
     }).then(usuarioEncontrado => {
 
@@ -63,7 +72,9 @@ UserController.loginUser = (req, res) => {
                 let loginOKmessage = `Welcome back ${usuarioEncontrado.name}`
                 res.json({
                     loginOKmessage,
-                    user: usuarioEncontrado,
+                    user: {name:usuarioEncontrado.name,
+                           age:usuarioEncontrado.age
+                    },
                     token: token
                 })
             };
