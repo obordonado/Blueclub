@@ -10,5 +10,6 @@ router.get('/rent', isAdmin, RentController.getAllRent);
 
 
 
+
 //Export
 module.exports = router;

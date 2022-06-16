@@ -83,5 +83,28 @@ UserController.loginUser = (req, res) => {
     }).catch(err => console.log(err));
 };
 
+
+///he cogido UserController.postUser para modificarlo
+UserController.putUser = async (req, res) => {
+    let identidad = req.body.id;
+    let name = req.body.name;
+    
+    User.findOne({
+        where:{id:identidad}
+    })
+   .then(user => {
+    if(!user){
+        res.send(`User not found!`)
+    }else{
+        user.update({
+            name: name,
+    });
+        res.send(user);
+
+    }
+    }).catch((error) => {
+        res.send(error);
+    });  
+};
 //Export
 module.exports = UserController;
