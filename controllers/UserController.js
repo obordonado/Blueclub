@@ -84,7 +84,6 @@ UserController.loginUser = (req, res) => {
 };
 
 
-///he cogido UserController.postUser para modificarlo
 UserController.putUser = async (req, res) => {
     let identidad = req.body.id;
     let name = req.body.name;

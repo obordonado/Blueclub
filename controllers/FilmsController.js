@@ -44,25 +44,22 @@ FilmsController.postFilm = async (req, res) => {
 
 FilmsController.searchFilm = async (req, res) => {
 
-    //Al tratarse de un GET y pasarle los parámetros por URL, no se usa req.body, sino req.params.
-    let films = req.params.model;
+    let id  = req.body.id;
+    let title = req.body.title;
     
-    Film.findAll({
-   
-        where : { title : title}
+    Film.findOne({
+        where:{id:id}
     })
-    .then(resultadoBusqueda => {
-
-        if(resultadoBusqueda[0]?.dataValues.title != undefined){
-            res.send(resultadoBusqueda);
-        }else{
-            res.send("Not found.");
-        }
-
-    })
-    .catch(err => console.log(err));
-    
-}
+   .then(film => {
+    if(!film){
+        res.send("Not found")
+    }else{
+        res.send({film});
+    }
+    }).catch((error) => {
+        res.send(error);
+    });  
+};
 
 
 //Export
