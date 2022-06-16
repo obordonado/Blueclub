@@ -48,7 +48,7 @@ FilmsController.searchFilm = async (req, res) => {
     let title = req.body.title;
     
     Film.findOne({
-        where:{id:id}
+        where:{title:title}
     })
    .then(film => {
     if(!film){
