@@ -129,7 +129,7 @@
 ----
 ----
 
->It's been a wonderful experience to code this app.
+>It's been a wonderful experience to code this app.<br>
 >The whole job has taken approximately 20 hours from start to end.
 
 
