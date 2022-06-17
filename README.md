@@ -16,8 +16,10 @@
 
 ## REST API <I>" BLUE-CLUB VIDEO STORE ".</I> 
 
-> In order to make a video store, I've made a relational database using the tecnologies below...
+> In order to make a video store, I've made a relational database using the tecnologies below.
 <img src="/img/ubuntu.png" style="width:80px;"/>  
+
+>LINUX IS AWESOME!
 
     "axios": "0.27.2",
     "bcryptjs": "2.4.3",
