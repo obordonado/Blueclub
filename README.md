@@ -45,7 +45,7 @@
 
 ## List of endpoints:
 
-######USER MANAGEMENT
+###### USER MANAGEMENT
 
 
 - <b>.../users/adduser</b>
@@ -87,7 +87,7 @@
 >As seen above, the data we obtain has been <b>filtered</b> so that no sensible data (password,role) can be seen.
 ---
 
-######FILM MANAGEMENT
+###### FILM MANAGEMENT
 - <b>.../films/addfilm</b>
 <img src="/img/addFilm.png" style="width:600px;"/>
 
@@ -109,6 +109,8 @@
 >In this case we get the complete JSON of films. 
 
 ---
+
+###### RENT MANAGEMENT
 
 - <b>POST.../rent/rent</b>
 <img src="/img/makeRent.png" style="width:600px;"/>
