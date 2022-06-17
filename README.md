@@ -16,7 +16,7 @@
 
 ## REST API <I>" BLUE-CLUB VIDEO STORE ".</I> 
 
-> In this ocasion I've made a relational database using the tecnologies below...
+> In order to make a video store, I've made a relational database using the tecnologies below...
 <img src="/img/ubuntu.png" style="width:80px;"/>  
 
     "axios": "0.27.2",
@@ -30,16 +30,17 @@
     "mysql-server"
     "sequelize": "6.20.1"
 
->*  In order to divide the program logic, I've used the <b>MVC (Model-View-Controller)</b> architectural pattern, making the code easier to manipulate if needed in the future.
+>*  To divide the program logic, I've used the <b>MVC (Model-View-Controller)</b> architectural pattern, making the code easier to manipulate if needed in the future.
 
 >* <b>JSON Web Token</b> will grant secure shared information between two parties and <b>BCRYPTJS</b> will hash every password
 
 >* It's also possible to create a <b>user with administrator privileges.</b>
+>* Also, it's design won't let you insert an empty or null attribute when using a POST method.
 
 
 <br>
 
->* By Using <b>POSTMAN</b> and <b>HTTP methods GET, POST, PUT</b> you will be able to access the following endpoints:
+>* By Using <b>POSTMAN</b> and <b>HTTP methods GET, POST, PUT</b> you will be able to access the endpoints.
 <br>
 
 ## List of endpoints:
@@ -47,6 +48,7 @@
 - <b>.../users/adduser</b>
 <img src="/img/adduser.png" style="width:600px;"/>
 
+>This way you will be able to add a <b>new user.</b>
 ------
 
 <br>
@@ -57,7 +59,7 @@
 <img src="/img/userLogin.png" style="width:600px;"/>
 
 
->It will generate the <b>JSON Web Token</b> that looks like ;
+>When you log in, it will generate the <b>JSON Web Token</b> that looks like ;
 
 ><i>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1LCJuYW1lIjoiWm90ZSIsImNsaWVudF9udW1iZXIiOjY2LCJhZ2UiOjE1LCJnZW5kZXIiOiJtYWxlIiwicGFzc3dvcmQiOiIkMmEkMDgkRjFqRzh0UWJuNWZFc1RwTnlUZzcuTzVaSFMxSWtmYnB5T2wwM013Tld4NVdndEl5d2lYWHUiLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIyLTA2LTE2VDE3OjExOjI5LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA2LTE2VDIwOjM5OjI2LjAwMFoifSwiaWF0IjoxNjU1NDc0NDM4LCJleHAiOjE2NTYzNzQ0Mzh9.-vkJX64xwksEKGSsOa7yZET12o8TRZxO2HoPAoLa7DM"</i>
 
@@ -68,7 +70,7 @@
 - <b>.../users/update</b>
 <img src="/img/userUpdate.png" style="width:600px;"/>
 
->Here we update a user, and can see that the original password (123456) has been previously <b>Hashed.</b>
+>Here we update a given user, and can see that the original password (123456) has been previously <b>Hashed.</b>
 
 <br>
 
@@ -79,7 +81,7 @@
 <img src="/img/listUsers.png" style="width:600px;"/>
 
 >In this case we get the complete JSON of users. 
->As seen above, the data we obtain has been filtered so that no sensible data (password,role) can be seen.
+>As seen above, the data we obtain has been <b>filtered</b> so that no sensible data (password,role) can be seen.
 ---
 
 <br>
@@ -123,5 +125,14 @@
 - <b>GET.../rent/rent</b>
 <img src="/img/getRents.png" style="width:600px;"/>
 
->This user has the "isadmin" attribute.
+>This user has the <b>"isadmin"</b> attribute.
 >By this method we retrieve the JSON package of all rents made.
+
+----
+
+
+>It's been a wonderful experience to code all you see.
+
+> Feel free to play with it Geek!!
+
+
