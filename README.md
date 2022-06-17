@@ -20,11 +20,13 @@
 
     "axios": "0.27.2",
     "bcryptjs": "2.4.3",
-    "dotenv": "16.0.1",
-    "express": "4.18.1",
     "jsonwebtoken": "8.5.1",
     "mysql2": "2.3.3",
+    "dotenv": "16.0.1",
+    "nodeJS"
+    "express": "4.18.1",
     "nodemon": "2.0.16",
+    "mysql-server"
     "sequelize": "6.20.1"
 
 >*  In order to divide the program logic, I've used the <b>MVC (Model-View-Controller)</b> architectural pattern, making the code easier to manipulate if needed in the future.
