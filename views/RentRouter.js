@@ -11,7 +11,5 @@ router.get('/rent', isAdmin, RentController.getAllRent);
 router.post(`/rent`,auth,RentController.postAllRent);
 
 
-
-
 //Export
 module.exports = router;

@@ -1,4 +1,7 @@
 
+const { INTEGER, INET } = require('sequelize');
+const { NUMBER } = require('sequelize');
+const { STRING } = require('sequelize');
 const { Film } = require('../models/index');
 
 //FilmsController object declaration
@@ -23,7 +26,23 @@ FilmsController.postFilm = async (req, res) => {
     let duration = req.body.duration;
     let recomended_age = req.body.recomended_age;
     let price = req.body.price;
- 
+ ///        res.send("Please introduce all data correctly.")
+
+    if(
+        title===""||null
+        ||year===""||null||year===STRING
+        // ||year!==NUMBER 
+        // ||genre===""||null||!STRING 
+        // ||director===""||null||!STRING 
+        // ||duration===""||null||!INTEGER
+        // ||duration===0 
+        // ||recomended_age===""||null||!INTEGER 
+        // ||price===""||null||!INTEGER
+        ){
+        return res.send("Please introduce all data correctly");
+    };
+    
+
     Film.create({
 
         title: title,
@@ -52,7 +71,7 @@ FilmsController.searchFilm = async (req, res) => {
     })
    .then(film => {
     if(!film){
-        res.send("Not found")
+        res.send("That film isn't included in our database.")
     }else{
         res.send({film});
     }
