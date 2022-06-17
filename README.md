@@ -75,10 +75,6 @@
 ----
 
 
-
-
-
-
 - <b>.../users</b>
 <img src="/img/listUsers.png" style="width:600px;"/>
 
@@ -88,3 +84,44 @@
 
 <br>
 
+- <b>.../films/addfilm</b>
+<img src="/img/addFilm.png" style="width:600px;"/>
+
+---
+
+<br>
+
+
+- <b>.../films/search</b>
+<img src="/img/searchFilm.png" style="width:600px;"/>
+
+> Here we get the information of the film we are searching for.
+
+---
+
+<br>
+
+- <b>.../films</b>
+<img src="/img/getFilms.png" style="width:600px;"/>
+
+>In this case we get the complete JSON of films. 
+
+---
+
+<br>
+
+- <b>POST.../rent/rent</b>
+<img src="/img/makeRent.png" style="width:600px;"/>
+
+>We generated another input in rent. 
+
+
+---
+
+<br>
+
+- <b>GET.../rent/rent</b>
+<img src="/img/getRents.png" style="width:600px;"/>
+
+>This user has the "isadmin" attribute.
+>By this method we retrieve the JSON package of all rents made.

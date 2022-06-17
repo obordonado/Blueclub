@@ -26,18 +26,17 @@ FilmsController.postFilm = async (req, res) => {
     let duration = req.body.duration;
     let recomended_age = req.body.recomended_age;
     let price = req.body.price;
- ///        res.send("Please introduce all data correctly.")
 
     if(
         title===""||null
-        ||year===""||null||year===STRING
-        // ||year!==NUMBER 
-        // ||genre===""||null||!STRING 
-        // ||director===""||null||!STRING 
-        // ||duration===""||null||!INTEGER
-        // ||duration===0 
-        // ||recomended_age===""||null||!INTEGER 
-        // ||price===""||null||!INTEGER
+        ||year===""||null
+        ||genre===""||null 
+        ||director===""||null 
+        ||duration===""||null
+        ||duration===0 
+        ||recomended_age===""||null
+        ||recomended_age===0
+        ||price===""||null
         ){
         return res.send("Please introduce all data correctly");
     };
