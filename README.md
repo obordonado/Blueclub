@@ -37,7 +37,7 @@
 >* <b>JSON Web Token</b> will grant secure shared information between two parties and <b>BCRYPTJS</b> will hash every password.
 
 >* It's also possible to create a <b>user with administrator privileges.</b>
->* By the way, it's design won't let you insert an empty or null attribute when using a POST method, and will give feedback.
+>* By the way, it's design won't let you insert an empty or null attribute when using a POST method, and will give feedback in case you do so.
 
 
 >* By Using <b>POSTMAN</b> and <b>HTTP methods GET, POST, PUT</b> you will be able to access the endpoints.
