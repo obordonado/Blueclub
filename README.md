@@ -130,6 +130,8 @@
 ----
 
 >It's been a wonderful experience to code this app.
+>The whole job has taken approximately 20 hours from start to end.
+
 
 > Feel free to play with it Geek!!
 
