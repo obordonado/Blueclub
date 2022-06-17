@@ -65,12 +65,21 @@
 ----
 
 - <b>.../users/update</b>
+<img src="/img/userUpdate.png" style="width:600px;"/>
+
+<br>
+
+----
 
 
 
 
 
 
+- <b>.../users</b>
+<img src="/img/listUsers.png" style="width:600px;"/>
 
+---
 
-- .../users
+<br>
+
