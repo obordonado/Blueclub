@@ -33,8 +33,8 @@ RentController.postAllRent = async (req, res) => {
        total_price: total_price,
        createdAt: createdAt,
        updatedAt: updatedAt,
-   }).then(user => {
-       res.send(`${user.name}, Rented succesfully!`);
+   }).then(film => {
+       res.send(`Rent Generated succesfully!`);
 
    }).catch((error) => {
        res.send(error);
