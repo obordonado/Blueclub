@@ -32,6 +32,18 @@ UserController.postUser = async (req, res) => {
     let gender = req.body.gender;
     let password = bcryptjs.hashSync(req.body.password, Number.parseInt(authConfig.rounds));
     let role = req.body.role;
+
+    if(
+        name===""||null
+        ||client_number===""||null
+        ||age===""||null 
+        ||gender===""||null 
+        ||role===""||null
+        )
+    {
+        return res.send("Please introduce all data correctly");
+    };
+    
     User.create({
         name: name,
         client_number: client_number,

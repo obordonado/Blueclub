@@ -25,6 +25,20 @@ RentController.postAllRent = async (req, res) => {
    let createdAt = req.body.createdAt;
    let updatedAt = req.body.updatedAt;
    
+   if(
+    filmId===""||null
+    ||userId===""||null
+    ||rent_date===""||null 
+    ||return_date===""||null 
+    ||total_price===""||null
+    ||createdAt===""||null 
+    ||updatedAt===""||null
+    )
+{
+    return res.send("Please introduce all data correctly");
+};
+
+
    Rent.create({
        filmId: filmId,
        userId: userId,

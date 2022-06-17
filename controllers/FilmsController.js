@@ -37,7 +37,8 @@ FilmsController.postFilm = async (req, res) => {
         ||recomended_age===""||null
         ||recomended_age===0
         ||price===""||null
-        ){
+        )
+    {
         return res.send("Please introduce all data correctly");
     };
     
