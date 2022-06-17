@@ -38,6 +38,7 @@
 
 >* By Using <b>POSTMAN</b> and <b>HTTP methods GET, POST, PUT</b> you will be able to access the following endpoints:
 <br>
+
 ## List of endpoints:
 
 - <b>.../users/adduser</b>
