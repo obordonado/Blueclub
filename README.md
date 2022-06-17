@@ -16,7 +16,8 @@
 
 ## REST API <I>" BLUE-CLUB VIDEO STORE ".</I> 
 
-> In this ocasion I've made a relational database installing using the listed below tecnologies on <b>Linux 20.04 OS.</b>
+> In this ocasion I've made a relational database using the tecnologies below...
+<img src="/img/ubuntu.png" style="width:80px;"/>  
 
     "axios": "0.27.2",
     "bcryptjs": "2.4.3",
@@ -67,6 +68,8 @@
 - <b>.../users/update</b>
 <img src="/img/userUpdate.png" style="width:600px;"/>
 
+>Here, we can see that the original password (123456) has been <b>Hashed.</b>
+
 <br>
 
 ----
@@ -79,6 +82,7 @@
 - <b>.../users</b>
 <img src="/img/listUsers.png" style="width:600px;"/>
 
+> As seen above, the data we obtain has been filtered so that no sensible data (password,role) can be seen.
 ---
 
 <br>
