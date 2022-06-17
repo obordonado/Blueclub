@@ -57,7 +57,7 @@
 <img src="/img/userLogin.png" style="width:600px;"/>
 
 
->It will give the <b>JSON Web Token</b> that looks like ;
+>It will generate the <b>JSON Web Token</b> that looks like ;
 
 ><i>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo1LCJuYW1lIjoiWm90ZSIsImNsaWVudF9udW1iZXIiOjY2LCJhZ2UiOjE1LCJnZW5kZXIiOiJtYWxlIiwicGFzc3dvcmQiOiIkMmEkMDgkRjFqRzh0UWJuNWZFc1RwTnlUZzcuTzVaSFMxSWtmYnB5T2wwM013Tld4NVdndEl5d2lYWHUiLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVkQXQiOiIyMDIyLTA2LTE2VDE3OjExOjI5LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIyLTA2LTE2VDIwOjM5OjI2LjAwMFoifSwiaWF0IjoxNjU1NDc0NDM4LCJleHAiOjE2NTYzNzQ0Mzh9.-vkJX64xwksEKGSsOa7yZET12o8TRZxO2HoPAoLa7DM"</i>
 
@@ -68,7 +68,7 @@
 - <b>.../users/update</b>
 <img src="/img/userUpdate.png" style="width:600px;"/>
 
->Here, we can see that the original password (123456) has been <b>Hashed.</b>
+>Here we update a user, and can see that the original password (123456) has been previously <b>Hashed.</b>
 
 <br>
 
@@ -82,7 +82,8 @@
 - <b>.../users</b>
 <img src="/img/listUsers.png" style="width:600px;"/>
 
-> As seen above, the data we obtain has been filtered so that no sensible data (password,role) can be seen.
+>In this case we get the complete JSON of users. 
+>As seen above, the data we obtain has been filtered so that no sensible data (password,role) can be seen.
 ---
 
 <br>
