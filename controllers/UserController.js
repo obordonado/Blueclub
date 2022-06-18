@@ -1,6 +1,7 @@
 
 const { User } = require('../models/index');
 
+//Import needed
 const jwt = require('jsonwebtoken');
 const bcryptjs = require('bcryptjs');
 let authConfig = require('../config/auth');
@@ -9,20 +10,15 @@ let authConfig = require('../config/auth');
 const UserController = {};
 
 UserController.getUser = (req, res) => {
-    //Funcion findAll de Sequelize
     User.findAll(
         {
-            attributes:{
-                exclude:[`password`, `role`]
-            }
+            attributes:{exclude:[`password`, `role`]}
         }
-    )
-
-    .then(data => {
-    
-        res.send(data)
-    });
-};
+        )
+        .then(data => {
+            res.send(data)
+        });
+    };
 
 UserController.postUser = async (req, res) => {
 
@@ -33,6 +29,7 @@ UserController.postUser = async (req, res) => {
     let password = bcryptjs.hashSync(req.body.password, Number.parseInt(authConfig.rounds));
     let role = req.body.role;
 
+    //Making sure we get the minimum correct data.
     if(
         name===""||null
         ||client_number===""||null
@@ -43,7 +40,8 @@ UserController.postUser = async (req, res) => {
     {
         return res.send("Please introduce all data correctly");
     };
-    
+
+    //If above data is correct --> User.create.
     User.create({
         name: name,
         client_number: client_number,
@@ -59,7 +57,7 @@ UserController.postUser = async (req, res) => {
     });    
     
 };
-
+//Log in User
 UserController.loginUser = (req, res) => {
 
     let documentacion = req.body.client_number;
@@ -67,35 +65,30 @@ UserController.loginUser = (req, res) => {
 
     User.findOne({
         where : {client_number : documentacion}
-        
 
     }).then(usuarioEncontrado => {
 
-        if(!usuarioEncontrado){
-            res.send("Incorrect User or Password");
-        } else {
-            if( bcryptjs.compareSync(clave, usuarioEncontrado.password)){
-                //Comprueba que el usuario existe y el password corresponde a ese usuario
-
-                let token = jwt.sign({ user: usuarioEncontrado }, authConfig.secret, {
-                    expiresIn: authConfig.expires
-                });
-                                
-                let loginOKmessage = `Welcome back ${usuarioEncontrado.name}`
-                res.json({
-                    loginOKmessage,
-                    user: {name:usuarioEncontrado.name,
-                           age:usuarioEncontrado.age
-                    },
-                    token: token
-                })
-            };
-        };
-
-    }).catch(err => console.log(err));
+    if(!usuarioEncontrado){
+        res.send("Incorrect User or Password");
+    } else {
+        if( bcryptjs.compareSync(clave, usuarioEncontrado.password)){//Making sure th user exists and password belongs to this user.
+    
+    let token = jwt.sign({ user: usuarioEncontrado }, authConfig.secret, {
+        expiresIn: authConfig.expires
+    });
+                    
+    let loginOKmessage = `Welcome back ${usuarioEncontrado.name}`
+    res.json({
+        loginOKmessage,
+        user: {name:usuarioEncontrado.name,age:usuarioEncontrado.age},
+        token: token
+    })
+};
+};
+}).catch(err => console.log(err));
 };
 
-
+//Modifying users attributes
 UserController.putUser = async (req, res) => {
     let identidad = req.body.id;
     let name = req.body.name;

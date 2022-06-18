@@ -5,7 +5,6 @@ const FilmsController = require('../controllers/FilmsController');
 const auth = require("../middlewares/auth");
 const isAdmin= require("../middlewares/isAdmin");
 
-
 //Endpoint-function links
 router.get('/', FilmsController.getFilms);///Get JSON of every movie in database.
 router.post('/addfilm',isAdmin, FilmsController.postFilm);///Add new movie to database.

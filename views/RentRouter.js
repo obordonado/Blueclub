@@ -1,4 +1,4 @@
-
+//needed
 const express = require('express');
 const router = express.Router();
 const auth = require("../middlewares/auth");
@@ -7,9 +7,9 @@ const RentController = require('../controllers/RentController');
 
 
 //Endpoint-function links
-router.get('/rent', isAdmin, RentController.getAllRent);
-router.post(`/rent`,auth,RentController.postAllRent);
+router.get('/rent', isAdmin, RentController.getAllRent);//Getting the JSON object of all "sales" in rent.
+router.post(`/rent`,auth,RentController.postAllRent);// Adding a new "sale" in rent.
 
 
-//Export
+//Exporting
 module.exports = router;

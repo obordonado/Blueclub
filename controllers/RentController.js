@@ -3,6 +3,8 @@ const { Rent } = require('../models/index');
 
 //UserController object declaration
 const RentController = {};
+
+//import needed
 const bcryptjs = require(`jsonwebtoken`);
 let authConfig = require(`../config/auth`);
 
@@ -15,6 +17,7 @@ RentController.getAllRent = async (req, res) => {
 
 };
 
+//Making a new "sale" in Rent.
 RentController.postAllRent = async (req, res) => {
 
    let filmId = req.body.filmId;
@@ -25,6 +28,7 @@ RentController.postAllRent = async (req, res) => {
    let createdAt = req.body.createdAt;
    let updatedAt = req.body.updatedAt;
    
+   //Making sure we input the minimum correct data.
    if(
     filmId===""||null
     ||userId===""||null
@@ -38,7 +42,7 @@ RentController.postAllRent = async (req, res) => {
     return res.send("Please introduce all data correctly");
 };
 
-
+//If above data is correct --> Rent.create. 
    Rent.create({
        filmId: filmId,
        userId: userId,

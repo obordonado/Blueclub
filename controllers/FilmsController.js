@@ -61,7 +61,7 @@ FilmsController.postFilm = async (req, res) => {
     });
 }
 
-//get movie through body
+//Get movie through body
 FilmsController.searchFilm = async (req, res) => {
 
     let id  = req.body.id;
@@ -80,7 +80,6 @@ FilmsController.searchFilm = async (req, res) => {
         res.send(error);
     });  
 };
-
 
 //Get movie by Id in url
 FilmsController.getById = (req, res) => {
@@ -119,12 +118,10 @@ FilmsController.getByTitle = (req, res) => {
 };
 
 
-
 ///Delete movie by movie id !! Need isAdmin && pass data through body.
 FilmsController.delete = async (req, res) => {
 
     let id  = req.params.id;
-    // let title = req.body.title;
     
     Film.destroy({
         where:{id:id}
@@ -142,8 +139,6 @@ FilmsController.delete = async (req, res) => {
 
 
 /// Delete --------ALL------- movies!!.Need isAdmin && pass data through body.
-
-
   FilmsController.deleteSeveral = (req, res) => {
 
     Film.findAll()
@@ -161,7 +156,6 @@ FilmsController.delete = async (req, res) => {
         });
       });
   };
-
 
 
 //Export
