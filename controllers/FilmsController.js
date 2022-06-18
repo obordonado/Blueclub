@@ -16,7 +16,7 @@ FilmsController.getFilms = (req, res) => {
     });
 };
 
-
+///Adding a new movie to database
 FilmsController.postFilm = async (req, res) => {
 
     let title = req.body.title;
@@ -26,7 +26,8 @@ FilmsController.postFilm = async (req, res) => {
     let duration = req.body.duration;
     let recomended_age = req.body.recomended_age;
     let price = req.body.price;
-
+    
+    ///catch blank or null spaces when introducing attributes
     if(
         title===""||null
         ||year===""||null
@@ -42,7 +43,7 @@ FilmsController.postFilm = async (req, res) => {
         return res.send("Please introduce all data correctly");
     };
     
-
+    ///If data is correct, create new movie.
     Film.create({
 
         title: title,
@@ -101,7 +102,6 @@ FilmsController.getById = (req, res) => {
         });
       });
   };
-
 
 
 //GET movie by Title in url
