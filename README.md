@@ -108,7 +108,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>.../films</b>
 <img src="/img/getFilms.png" style="width:600px;"/>
 
->In this case we get the complete JSON of films. 
+>In this case we get the complete JSON of "films" in order to see the complete movie billboard. 
 
 ---
 
@@ -117,7 +117,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>POST.../rent/rent</b>
 <img src="/img/makeRent.png" style="width:600px;"/>
 
->We generated another input in rent. 
+>We generated another "sale" in rent table. 
 
 
 ---
