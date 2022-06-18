@@ -115,7 +115,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>.../films/:title</b>
 <img src="/img/getMovieByUrl.png" style="width:600px;"/>
 
-> A better method would be if we could also find a movie by passing its name through the url.
+> A better method is finding a movie by passing its name through the url.
 
 ---
 
@@ -132,7 +132,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>POST.../rent/rent</b>
 <img src="/img/makeRent.png" style="width:600px;"/>
 
->By usig <b>POST method</b>  we generated another "sale" in rent table.
+>By usig <b>POST method</b>  we generated another "sale" in rent table. ("auth" needed)
 
 
 
@@ -141,8 +141,8 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>GET.../rent/rent</b>
 <img src="/img/getRents.png" style="width:600px;"/>
 
->Because this user has the <b>"isadmin"</b> attribute, only this user will be able to have access to the whole rent JSON.
->By this method we retrieve the JSON package of all rents previously made.
+>Only a user with the <b>"isadmin"</b> attribute, will be able to have access to the whole rent JSON.
+>By using this endpoint we retrieve the JSON object of all rents previously made.
 
 ----
 ###### <center><span style="color:red"> DELETING (Only working in Film db, but you get the idea..)</span></center> 
@@ -166,7 +166,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 
 >The <b>"isadmin"</b> attribute is needed to <b>delete several movies by id.</b> 
 
->As mentioned in the begining of this document, you could easily <b>ERASE THE WHOLE</b> movie db if you wished to do so.
+><b>As mentioned in the begining of this document</b>, you could easily <b>ERASE THE WHOLE</b> movie db if you wished to do so.
 
 <br>
 
