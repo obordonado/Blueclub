@@ -120,52 +120,49 @@ FilmsController.getByTitle = (req, res) => {
 
 
 
+///Delete movie by movie id !! Need isAdmin && pass data through body.
+FilmsController.delete = async (req, res) => {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FilmsController.delete = async (req, res) => {
-
-//     let id  = req.body.id;
-//     let title = req.body.title;
+    let id  = req.params.id;
+    // let title = req.body.title;
     
-//     Film.destroy({
-//         where:{title:title}
-//     })
-//    .then(film => {
-//     if(!film){
-//         res.send("That movie doesn't exist in our database. Did you type the name correctly?")
-//     }else{
-//         res.send("The movie was deleted successfuly");
-//     }
-//     }).catch((error) => {
-//         res.send(error);
-//     });  
-// };
+    Film.destroy({
+        where:{id:id}
+    })
+   .then(film => {
+    if(film ==1){
+        res.send(`The movie with id ${id} was deleted successfuly.`);
+    }else{
+        res.send(`That didn't work. Did you type the correct id?`);
+    }
+    }).catch((error) => {
+        res.send(error);
+    });  
+};
 
 
+/// Delete --------ALL------- movies!!.Need isAdmin && pass data through body.
 
 
+  FilmsController.deleteSeveral = (req, res) => {
+    console.log("entro en delete all")
+    Film.findAll()
+    .then(data => {return (data)});
 
+    Film.destroy({where: {id: [38,39,40,41,42]},truncate:false})
 
+    .then(nums => {
+      console.log("entro en film.destroy");
 
-
+        res.send({ message: `${nums} Movies were deleted successfully!` });
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Some error occurred while removing all movies."
+        });
+      });
+  };
 
 
 
