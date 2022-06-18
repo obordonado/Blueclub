@@ -60,7 +60,7 @@ FilmsController.postFilm = async (req, res) => {
     });
 }
 
-
+//get movie through body
 FilmsController.searchFilm = async (req, res) => {
 
     let id  = req.body.id;
@@ -81,8 +81,7 @@ FilmsController.searchFilm = async (req, res) => {
 };
 
 
-
-
+//Get movie by Id in url
 FilmsController.getById = (req, res) => {
     const id = req.params.id;
 
@@ -102,6 +101,23 @@ FilmsController.getById = (req, res) => {
         });
       });
   };
+
+
+
+//GET movie by Title in url
+FilmsController.getByTitle = (req, res) => {
+  Film.findAll({ where: { title: req.params.title } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Error 500."
+      });
+    });
+};
+
 
 
 

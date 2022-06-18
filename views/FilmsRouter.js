@@ -10,7 +10,8 @@ const FilmsController = require('../controllers/FilmsController');
 router.get('/', FilmsController.getFilms);
 router.post('/addfilm', FilmsController.postFilm);
 router.get('/search', FilmsController.searchFilm);///Find by movie name in body JSON
-router.get('/:id', FilmsController.getById);///Find movie by Id
+router.get('/:title', FilmsController.getByTitle);///Find movie by name in url
+router.get('/:id', FilmsController.getById);///Find movie by Id in url
 // router.get(`/delete`, FilmsController.delete);
 
 //Export

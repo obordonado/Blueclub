@@ -105,6 +105,18 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 ---
 
 
+- <b>.../films/:title</b>
+<img src="/img/getMovieByUrl.png" style="width:600px;"/>
+
+> We can also find a movie by passing its name through the url.
+
+---
+
+
+
+
+
+
 - <b>.../films</b>
 <img src="/img/getFilms.png" style="width:600px;"/>
 
