@@ -16,7 +16,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 
 ## RESTful API <I>" BLUE-CLUB VIDEO STORE ".</I> 
 
-> In order to make a video store, I've made a relational database using the tecnologies below.
+> In order to make a video store, I've made a relational database using the above tecnologies.
 <img src="/img/ubuntu.png" style="width:80px;"/>  
 
 >LINUX IS AWESOME!
@@ -154,7 +154,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 
 >The <b>"isadmin"</b> attribute is needed to delete a movie by id. 
 
->By using this method, we can <b>delete movies one by one.</b>
+>By using this method, we can <b>delete movies one by one</b> passing the id through the url.
 
 <br>
 
@@ -178,7 +178,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 <br>
 
 >It's been a wonderful experience to code this project.<br>
->I'm very open to any suggestions you may have about it !!
+>I'm very open to any suggestions you may have about it !!<br>
 >The whole job has taken approximately 20 hours from start to end
 
 
