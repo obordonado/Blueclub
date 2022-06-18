@@ -172,7 +172,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 
 ----
 
-<img src="/img/finish.png" style="width:300px;"/><img src="/img/end.jpg" style="width:200px;"/>
+<img src="/img/finish.png" style="width:300px;"/><img src="/img/end.jpg" style="width:200px;"/><img src="/img/end.jpg" style="width:200px;"/>
 
 
 <br>
