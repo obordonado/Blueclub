@@ -1,4 +1,4 @@
-<!-- ![Axios](/img/axios.png)*Axios* -->
+sp<!-- ![Axios](/img/axios.png)*Axios* -->
 <img src="/img/Geekshubs.png" style="width:900px;"/>
 
 ---
@@ -37,7 +37,8 @@
 
 ## List of endpoints:
 
-###### USER MANAGEMENT
+###### <center><span style="color:red"> USER MANAGEMENT</span></center> 
+
 
 
 - <b>.../users/adduser</b>
@@ -79,7 +80,8 @@
 >As seen above, the data we obtain has been <b>filtered</b> so that no sensible data (password,role) can be seen.
 ---
 
-###### FILM MANAGEMENT
+###### <center><span style="color:red"> MOVIE MANAGEMENT</span></center> 
+
 - <b>.../films/addfilm</b>
 <img src="/img/addFilm.png" style="width:600px;"/>
 
@@ -110,7 +112,7 @@
 
 ---
 
-###### RENT MANAGEMENT
+###### <center><span style="color:red"> RENT MANAGEMENT</span></center> 
 
 - <b>POST.../rent/rent</b>
 <img src="/img/makeRent.png" style="width:600px;"/>
