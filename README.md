@@ -90,7 +90,15 @@
 - <b>.../films/search</b>
 <img src="/img/searchFilm.png" style="width:600px;"/>
 
-> Here we get the specific information of the film we are searching for.
+> This method works by passing the name of the movie we're looking for through the body.
+
+---
+
+
+- <b>.../films/:id</b>
+<img src="/img/getFilmById.png" style="width:600px;"/>
+
+> This other method works by passing the id of the movie (in case we know it) through the url.
 
 ---
 
