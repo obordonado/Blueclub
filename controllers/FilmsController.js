@@ -54,7 +54,7 @@ FilmsController.postFilm = async (req, res) => {
         price: price
 
     }).then(film => {
-        res.send(`${film.title}, has been added succesfully!`);
+        res.send(`${film.title}, has been added successfully!`);
     }).catch((error) => {
         res.send(error);
     });
@@ -71,7 +71,7 @@ FilmsController.searchFilm = async (req, res) => {
     })
    .then(film => {
     if(!film){
-        res.send("That film isn't included in our database.")
+        res.send("That movie doesn't exist in our database. Did you type the name correctly?")
     }else{
         res.send({film});
     }
@@ -79,6 +79,78 @@ FilmsController.searchFilm = async (req, res) => {
         res.send(error);
     });  
 };
+
+
+
+
+FilmsController.getById = (req, res) => {
+    const id = req.params.id;
+
+    Film.findByPk(id)
+      .then(data => {
+        if (data) {
+          res.send(data);
+        } else {
+          res.status(404).send({
+            message: `Cannot find id ${id}.`
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Error retrieving movie with id=" + id
+        });
+      });
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FilmsController.delete = async (req, res) => {
+
+//     let id  = req.body.id;
+//     let title = req.body.title;
+    
+//     Film.destroy({
+//         where:{title:title}
+//     })
+//    .then(film => {
+//     if(!film){
+//         res.send("That movie doesn't exist in our database. Did you type the name correctly?")
+//     }else{
+//         res.send("The movie was deleted successfuly");
+//     }
+//     }).catch((error) => {
+//         res.send(error);
+//     });  
+// };
+
+
+
+
+
+
+
+
+
 
 
 //Export
