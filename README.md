@@ -14,7 +14,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 
 # <center>Relational Database Project.</center>
 
-## REST API <I>" BLUE-CLUB VIDEO STORE ".</I> 
+## RESTful API <I>" BLUE-CLUB VIDEO STORE ".</I> 
 
 > In order to make a video store, I've made a relational database using the tecnologies below.
 <img src="/img/ubuntu.png" style="width:80px;"/>  
@@ -32,10 +32,15 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 >* By the way, it's design won't let you insert an empty or null attribute when using a POST method, and will give feedback in case you do so.
 
 
->* By Using <b>POSTMAN</b> and <b>HTTP methods GET, POST, PUT</b> you will be able to access the endpoints.
+>* By Using <b>POSTMAN</b> and <b>HTTP methods GET, POST, PUT and DELETE</b> you will be able to access the endpoints and manage the database.
+
+> * #### Important info:
+>* <b>Keep in mind that all you are able to do with the film db, could be easily done with User && Rent tables by using the code contained in "controllers/FilmsController.js"</b>
+
+>* I've left many <b>references inside the code</b> so that anyone can understand what's going on.
 <br>
 
-## List of endpoints:
+## Sorted list of endpoints:
 
 ###### <center><span style="color:red"> USER MANAGEMENT</span></center> 
 
@@ -66,7 +71,7 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>.../users/update</b>
 <img src="/img/userUpdate.png" style="width:600px;"/>
 
->Here we update a given user, and can see that the original password (123456) has been previously <b>Hashed.</b>
+>Here we update any given user so that any user previously logged in can change its own info, and we can also see that the original password (123456) used to log in, has been <b>Hashed.</b>
 
 <br>
 
@@ -76,14 +81,16 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>.../users</b>
 <img src="/img/listUsers.png" style="width:600px;"/>
 
->In this case we get the complete JSON of users. 
->As seen above, the data we obtain has been <b>filtered</b> so that no sensible data (password,role) can be seen.
+>If <b>admin</b> wishes to do so, in this case we get the complete JSON of users.
+>As seen above, the data we obtain has been <b>filtered</b> so that no sensible data (password,role) can be seen. This can be changed by modifying "..controllers/UserController.js", inside User.findAll(). 
 ---
 
 ###### <center><span style="color:red"> MOVIE MANAGEMENT</span></center> 
 
 - <b>.../films/addfilm</b>
 <img src="/img/addFilm.png" style="width:600px;"/>
+
+>Only an <b>admin</b> can add a new movie. 
 
 ---
 
@@ -108,13 +115,9 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>.../films/:title</b>
 <img src="/img/getMovieByUrl.png" style="width:600px;"/>
 
-> We can also find a movie by passing its name through the url.
+> A better method would be if we could also find a movie by passing its name through the url.
 
 ---
-
-
-
-
 
 
 - <b>.../films</b>
@@ -129,7 +132,8 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 - <b>POST.../rent/rent</b>
 <img src="/img/makeRent.png" style="width:600px;"/>
 
->We generated another "sale" in rent table. 
+>By usig <b>POST method</b>  we generated another "sale" in rent table.
+
 
 
 ---
@@ -141,10 +145,41 @@ sp<!-- ![Axios](/img/axios.png)*Axios* -->
 >By this method we retrieve the JSON package of all rents previously made.
 
 ----
+###### <center><span style="color:red"> DELETING (Only working in Film db, but you get the idea..)</span></center> 
+
+---
+
+- <b>DELETE.../films/id</b>
+<img src="/img/delById.png" style="width:600px;"/>
+
+>The <b>"isadmin"</b> attribute is needed to delete a movie by id. 
+
+>By using this method, we can <b>delete movies one by one.</b>
+
+<br>
+
 ----
 
->It's been a wonderful experience to code this app.<br>
->The whole job has taken approximately 20 hours from start to end.
+
+- <b>DELETE.../films/</b>
+<img src="/img/deleteSeveralById.png" style="width:600px;"/>
+
+>The <b>"isadmin"</b> attribute is needed to <b>delete several movies by id.</b> 
+
+>As mentioned in the begining of this document, you could easily <b>ERASE THE WHOLE</b> movie db if you wished to do so.
+
+<br>
+
+----
+
+<img src="/img/finish.png" style="width:600px;"/><img src="/img/end.jpg" style="width:300px;"/>
+
+
+<br>
+
+>It's been a wonderful experience to code this project.<br>
+>I'm very open to any suggestions you may have about it !!
+>The whole job has taken approximately 20 hours from start to end
 
 
 > Feel free to play with it Geek!!

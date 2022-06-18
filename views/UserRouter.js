@@ -6,7 +6,7 @@ const isAdmin = require("../middlewares/isAdmin");
 const UserController = require('../controllers/UserController');
 
 //Endpoint-function links
-router.get('/', auth, UserController.getUser);
+router.get('/', isAdmin, UserController.getUser);
 router.put(`/update`, UserController.putUser);
 router.post('/adduser', UserController.postUser);
 router.post('/login', UserController.loginUser);
