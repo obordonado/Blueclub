@@ -145,15 +145,13 @@ FilmsController.delete = async (req, res) => {
 
 
   FilmsController.deleteSeveral = (req, res) => {
-    console.log("entro en delete all")
+
     Film.findAll()
     .then(data => {return (data)});
 
     Film.destroy({where: {id: [38,39,40,41,42]},truncate:false})
 
     .then(nums => {
-      console.log("entro en film.destroy");
-
         res.send({ message: `${nums} Movies were deleted successfully!` });
       })
       .catch(err => {
