@@ -9,6 +9,7 @@ let authConfig = require('../config/auth');
 //UserController object declaration
 const UserController = {};
 
+///Methods---------------------------------
 UserController.getUser = (req, res) => {
     User.findAll(
         {

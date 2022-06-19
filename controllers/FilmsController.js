@@ -83,24 +83,17 @@ FilmsController.searchFilm = async (req, res) => {
 
 //Get movie by Id in url
 FilmsController.getById = (req, res) => {
-    const id = req.params.id;
-
-    Film.findByPk(id)
-      .then(data => {
-        if (data) {
-          res.send(data);
-        } else {
-          res.status(404).send({
-            message: `Cannot find id ${id}.`
-          });
-        }
-      })
-      .catch(err => {
-        res.status(500).send({
-          message: "Error retrieving movie with id=" + id
-        });
+  Film.findOne({ where: { id: req.params.id } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Error 500."
       });
-  };
+    });
+};
 
 
 //GET movie by Title in url
@@ -144,7 +137,7 @@ FilmsController.delete = async (req, res) => {
     Film.findAll()
     .then(data => {return (data)});
 
-    Film.destroy({where: {id: [38,39,40,41,42]},truncate:false})
+    Film.destroy({where: {id: [22,23,24,]},truncate:false})
 
     .then(nums => {
         res.send({ message: `${nums} Movies were deleted successfully!` });
@@ -152,7 +145,7 @@ FilmsController.delete = async (req, res) => {
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while removing all movies."
+            err.message || "Could not delete. Did you check the id's?"
         });
       });
   };
