@@ -121,7 +121,7 @@ FilmsController.delete = async (req, res) => {
     })
    .then(film => {
     if(film ==1){
-        res.send(`The movie with id ${id} was deleted successfuly.`);
+        res.send(`The movie with id ${id} was deleted successfully.`);
     }else{
         res.send(`That didn't work. Did you type the correct id?`);
     }
