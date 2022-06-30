@@ -1,8 +1,8 @@
 const express = require('express');
+const port = process.env.PORT || 5000; //Configuramos puerto heroku
 
 const app = express();
 
-const port = 3000;
 
 const db = require('./db/db');
 
