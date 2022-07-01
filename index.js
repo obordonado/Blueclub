@@ -1,5 +1,5 @@
 const express = require('express');
-const port = process.env.PORT || 5000; //Configuramos puerto heroku
+const port = process.env.PORT || 3000; //Configuramos puerto heroku
 
 var corsOptions = {
     origin: "*",
