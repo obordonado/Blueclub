@@ -81,9 +81,11 @@ FilmsController.searchFilm = async (req, res) => {
     });  
 };
 
+
 //Get movie by Id in url
 FilmsController.getById = (req, res) => {
-  Film.findOne({ where: { id: req.params.id } })
+let id = req.params.id
+  Film.findById(id)
     .then(data => {
       res.send(data);
     })
