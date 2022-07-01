@@ -7,7 +7,7 @@ var corsOptions = {
     preflightContinue: false,
     optionsSuccessStatus: 204
   };
-const cors = require("cors");
+const cors = require('cors');
 const app = express();
 const db = require('./db/db');
 const router = require('./router.js');
