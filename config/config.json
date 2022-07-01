@@ -1,10 +1,11 @@
 
 {
   "development": {
-    "username": "root",
-    "password": "Kastana-100.",
-    "database": "blueclub",
-    "host": "127.0.0.1",
+    "username": "b795cd5d116867",
+    "password": "403923db",
+    "database": "heroku_eb4f2c457133f77",
+    "host": "eu-cdbr-west-02.cleardb.net",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {
@@ -15,10 +16,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "b795cd5d116867",
+    "password": "403923db",
+    "database": "heroku_eb4f2c457133f77",
+    "host": "eu-cdbr-west-02.cleardb.net",
+    "port": "3306",
     "dialect": "mysql"
   }
 }

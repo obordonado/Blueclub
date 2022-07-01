@@ -83,17 +83,17 @@ FilmsController.searchFilm = async (req, res) => {
 
 //Get movie by Id in url
 FilmsController.getById = (req, res) => {
-  Film.findOne({ where: { id: req.params.id } })
-    .then(data => {
+  Film.findAll({ where: { id: req.params.id } })
+    .then((data) => {
       res.send(data);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
-        message:
-          err.message || "Error 500."
+        message: err.message || "Error 500.",
       });
     });
 };
+
 
 
 //GET movie by Title in url
@@ -121,7 +121,7 @@ FilmsController.delete = async (req, res) => {
     })
    .then(film => {
     if(film ==1){
-        res.send(`The movie with id ${id} was deleted successfuly.`);
+        res.send(`The movie with id ${id} was deleted successfully.`);
     }else{
         res.send(`That didn't work. Did you type the correct id?`);
     }

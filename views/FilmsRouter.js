@@ -10,7 +10,13 @@ router.get('/', FilmsController.getFilms);///Get JSON of every movie in database
 router.post('/addfilm',isAdmin, FilmsController.postFilm);///Add new movie to database.
 router.get('/search', FilmsController.searchFilm);///Find by movie name in body JSON.
 router.get('/:title', FilmsController.getByTitle);///Find movie by name in url.
-router.get('/:id', FilmsController.getById);///Find movie by Id in url.
+// router.get('/:id', FilmsController.getById);///Find movie by Id in url.
+//IMPORTANT !!! Commented Id because SEQUELIZE doen't allow getting data by url with two
+//different search queries. Either one or the other. Discomment one or the other in order
+//for it to work correctly!!
+
+
+
 
 ///-----Deleting movies------
 router.delete(`/:id`, isAdmin, FilmsController.delete);///Delete movie by id.
