@@ -1,16 +1,18 @@
 const express = require('express');
-const port = process.env.PORT || 5000; //Configuramos puerto heroku
+const port = process.env.PORT || 4000; //Configuramos puerto heroku
 
-var corsOptions = {
-    origin: "*",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204
-  };
+
 const cors = require("cors");
 const app = express();
 const db = require('./db/db');
 const router = require('./router.js');
+
+var corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+};
 
 //Middleware SIEMPRE COPIAR Y PEGAR.
 
