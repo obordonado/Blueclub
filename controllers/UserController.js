@@ -28,7 +28,7 @@ UserController.postUser = async (req, res) => {
     let age = req.body.age;
     let gender = req.body.gender;
     let password = bcryptjs.hashSync(req.body.password, Number.parseInt(authConfig.rounds));
-    let role = req.body.role;
+    // let role = req.body.role; Commented for the moment. Not sure if I'll use it further on. Admin will assign roles if needed.
 
     //Making sure we get the minimum correct data.
     if(
@@ -36,7 +36,7 @@ UserController.postUser = async (req, res) => {
         ||client_number===""||null
         ||age===""||null 
         ||gender===""||null 
-        ||role===""||null
+        // ||role===""||null Commented for the moment. Not sure if I'll use it further on. Admin will assign roles if needed.
         )
     {
         return res.send("Please introduce all data correctly");
@@ -49,7 +49,7 @@ UserController.postUser = async (req, res) => {
         age: age,
         gender:gender,        
         password: password,
-        role: role
+        // role: role  Commented for the moment. Not sure if I'll use it further on. Admin will assign roles if needed.
     }).then(user => {
         res.send(`${user.name}, you have been added succesfully!`);
 
