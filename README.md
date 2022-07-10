@@ -1,4 +1,4 @@
-sp<!-- ![Axios](/img/axios.png)*Axios* -->
+
 <img src="/img/Geekshubs.png" style="width:900px;"/>
 
 ---
